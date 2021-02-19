@@ -37,6 +37,39 @@ namespace OpenCryptShot
                 Console.Read();
                 return;
             }
+         /*   using (HttpClient client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://usainbot.com/api/");
+                Task<HttpResponseMessage> response = client.GetAsync("?key=" + config.apiKey);
+                HttpResponseMessage result = response.Result;
+                response.Wait();
+                if (result.IsSuccessStatusCode)
+                {
+                    Task<string> task = result.Content.ReadAsStringAsync();
+                    string[] res = task.Result.Split(':');
+                    config.name = res[0];
+                    config.expiry = res[1];
+                }
+                else if (result.StatusCode == HttpStatusCode.Unauthorized)
+                {
+                    Console.WriteLine("No license for this API key.");
+                    Thread.Sleep(3000);
+                    return;
+                }
+                else if (result.StatusCode == HttpStatusCode.Forbidden)
+                {
+                    Console.WriteLine("Your license has expired.");
+                    Thread.Sleep(3000);
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("Unknown error while querying API.");
+                    Thread.Sleep(3000);
+                    return;
+                }
+            }
+            Console.WriteLine("Hello " + config.name + ", your license will expire on " + config.expiry); */
 
             try
             {
