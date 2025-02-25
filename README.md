@@ -1,3 +1,3 @@
 # OpenUsainBot
 
-An open source, fully automated bot for high volatility market with discord parsing for pump and dumps.
+An open source, fully automated bot for high volatility market with discord parsing.
